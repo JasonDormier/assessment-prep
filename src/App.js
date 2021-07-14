@@ -1,9 +1,11 @@
-import Poki from './components/Poki';
+import PersonData from './components/PersonData/PersonData';
+import Form from './components/Form/Form';
 
 function App() {
   return (
     <div className="App">
-      <Poki />
+      <Form />
+      <PersonData />
     </div>
   );
 }
