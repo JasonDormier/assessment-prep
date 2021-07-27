@@ -7,14 +7,15 @@ const Person = (props) => {
     return (
 
         <div>
-            <h2>{props.firstName}{props.lastName}</h2>
+            <h2>{props.firstName} {props.lastName}</h2>
             <ol>
-                <li>Company: {props.company}</li>
                 <li>Email: {props.email}</li>
+                <li>Age: {props.age}</li>
+                <li>Job Title: {props.job_title}</li>
                 <li>Skill: {props.skill}</li>
                 <li>Average: {props.averageScore}</li>
                 <ol>
-                    <li>{props.Scores}</li>
+                    {/* this needs to be a component? that handles the the printing of each test score?*/}
                 </ol>
             </ol>
         </div>
