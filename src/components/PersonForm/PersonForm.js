@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import './Form.css';
+import Card from "../Card/Card";
+import classes from './PersonForm.module.css';
 
 const Form = (props) => {
 
@@ -24,22 +25,16 @@ const Form = (props) => {
     }
 
     return (
-
-        <form onSubmit={handleSubmit}>
-            <div>
+        <Card className={classes.input}>
+            <form onSubmit={handleSubmit}>
                 <label>Search by name</label>
                 <input type='text' value={enteredName} onChange={nameChangeHandler}></input>
-            </div>
-            <div>
                 <label>Search by tag</label>
                 <input type='text' value={enteredTag} onChange={tagChangeHanlder}></input>
-            </div>
-            <div>
                 <button type='submit'> Filter </button>
-            </div>
-        </form>
+            </form>
+        </Card>
     );
 }
-
 
 export default Form;
