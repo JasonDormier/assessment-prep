@@ -64,16 +64,30 @@ const PersonData = () => {
     const [personData, setPersonData] = useState([]);
     const [testScores, setTestScores] = useState([]);
 
+    // const passData = () =>{
+    //     return {
+    //         'key' :personIndex,
+    //         'firstName' : first_name,
+    //         'lastName' : last_name,
+    //         'email' : email,
+    //         'age' calculateAge(date_of_birth),
+    //         'job_title' : employment.title,
+    //         'skill' : employment.key_skill,
+    //         'averageScore' : testScores[10],
+    //     }
+    // }
+
     useEffect(() => {
         fetchData().then(apiPerson => {
             setPersonData(person => [...person, ...apiPerson]);
         });
-    }, []);
-
-    useEffect(() => {
         let testScores = testScoresFunction();
         setTestScores(testScore => [...testScore, ...testScores]);
     }, []);
+
+    // useEffect(() => {
+
+    // }, []);
 
     //let personTestScores = testScoresFunction();
 
